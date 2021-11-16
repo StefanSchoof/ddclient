@@ -5810,7 +5810,7 @@ sub nic_duckdns_update {
         $url .= $h;
         $url .= "&token=";
         $url .= $config{$h}{'password'};
-        $url .= "&ip=";
+        $url .= is_ipv6($ip) ? "&ipv6=" : "&ip=";
         $url .= $ip;
 
 
